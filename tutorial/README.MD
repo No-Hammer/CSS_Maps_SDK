@@ -21,6 +21,7 @@
 * SpawnDM - точка спавна для игрока в режиме DeathMatch
 * SpawnZ - точка спавна для зомби в зомби режимах
 * SpawnHostage - точка спавна для заложника
+
 ![Screenshot02](screenshots/screenshot02.png)
 
 
@@ -135,5 +136,6 @@
 Компонент **Trigger2** имеет два параметра:
 * AllowCT - разрешает взаимодействовать с этим триггером контр-террористам
 * AllowT - разрешает взаимодействовать с этим триггером террористам
-* ![Screenshot12](screenshots/screenshot12.png)
+
+![Screenshot12](screenshots/screenshot12.png)
 
