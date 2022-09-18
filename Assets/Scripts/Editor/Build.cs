@@ -12,14 +12,7 @@ public class Builds : Editor
         EditorApplication.SaveScene();
         Build(BuildTarget.Android, Selection.objects);
     }
-
-    [MenuItem("Build/Build StandAlone")]
-    private static void BuildStandAlone()
-    {
-		EditorApplication.SaveScene();
-        Build(BuildTarget.StandaloneWindows, Selection.objects);
-    }
-
+	
     private static void Build(BuildTarget bt, Object[] objects)
     {
         Directory.CreateDirectory("maps");
