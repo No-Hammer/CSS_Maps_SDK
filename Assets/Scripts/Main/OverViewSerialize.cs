@@ -15,8 +15,10 @@ public class OverViewSerialize : MonoBehaviour
 #if UNITY_EDITOR
     public static void Save(string mapName, OverView overview)
     {
-        
-        using (FileStream fs = new FileStream($"{Path.GetFullPath(Path.Combine(Application.dataPath, "../"))}/maps/overviews/{mapName}", FileMode.OpenOrCreate, FileAccess.ReadWrite))
+        string fullPath = $"{Path.GetFullPath(Path.Combine(Application.dataPath, "../"))}/maps/overviews/{mapName}";
+        if (File.Exists(fullPath))
+            File.Delete(fullPath);
+        using (FileStream fs = new FileStream(fullPath, FileMode.OpenOrCreate, FileAccess.ReadWrite))
         {
             using (StreamWriter writer = new StreamWriter(fs))
             {

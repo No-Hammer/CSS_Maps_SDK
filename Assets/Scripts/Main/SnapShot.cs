@@ -5,6 +5,7 @@ using UnityEditor;
 using System;
 using UnityEngine.SceneManagement;
 using System.IO;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 [ExecuteInEditMode, RequireComponent(typeof(Camera), typeof(RectTransform))]
 public class SnapShot : MonoBehaviour
@@ -23,9 +24,11 @@ public class SnapShot : MonoBehaviour
     [ContextMenu("Take Snap Shot")]
     public void TakeSnapshot()
     {
-        RenderTexture rt = new RenderTexture(TextureSize, TextureSize, 24);
-        rt.antiAliasing = antiAliasing;
-        rt.filterMode = FilterMode.Trilinear;
+        RenderTexture rt = new RenderTexture(TextureSize, TextureSize, 24)
+        {
+            antiAliasing = antiAliasing,
+            filterMode = FilterMode.Trilinear
+        };
         GetComponent<Camera>().targetTexture = rt;
         Texture2D snapshot = new Texture2D(TextureSize, TextureSize, TextureFormat.RGB24, false);
         GetComponent<Camera>().Render();
@@ -42,6 +45,8 @@ public class SnapShot : MonoBehaviour
         if (!Directory.Exists(folderPath))
             Directory.CreateDirectory(folderPath);
         string filePath = $"{folderPath}/{SceneManager.GetActiveScene().name}.png";
+        if (File.Exists(filePath))
+            File.Delete(filePath);
         File.WriteAllBytes(filePath, bytes);
         snapshotPath = filePath;
         AssetDatabase.Refresh();
