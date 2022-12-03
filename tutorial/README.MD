@@ -1,6 +1,6 @@
 # Создание карт для [Counter Shot: Source](https://vk.com/cs_by_devi)
 
-**Требуемая версия Unity:** Unity3D 5.6.7 или выше(до 2017.4.40 включительно) + Android Build Support (можно загрузить в [архиве](https://unity3d.com/ru/get-unity/download/archive) Unity)
+**Требуемая версия Unity:** Unity3D 2017.4.36 + Android Build Support (можно загрузить в [архиве](https://unity3d.com/ru/get-unity/download/archive) Unity)
 ![Screenshot01](screenshots/screenshot01.png)
 
 # Начало
