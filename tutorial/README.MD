@@ -39,34 +39,35 @@
 Это строковой массив, который может(если оружия отключать не нужно, то его нужно оставить пустым) содержать названия оружий, которые нужно отключить на карте.
 
 <ins>Названия оружий для добавления в массив</ins>
-* c4
-* glock18
+* eq_c4
+* knife
 * rif_ak47
-* m4a1
-* famas
-* galil
-* aug
-* sg552
-* sg550
-* g3sg1
-* awp
-* scout
-* m3
-* xm1014
-* m249
-* mac10
+* rif_m4a1
+* rif_famas
+* rif_galil
+* rif_aug
+* rif_sg552
+* snip_sg550
+* snip_g3sg1
+* snip_awp
+* snip_scout
+* shot_m3super90
+* shot_xm1014
+* mach_m249para
+* smg_mac10
 * smg_tmp
-* mp5
-* ump45
-* p90
-* usp
-* p288
-* fiveseven
-* deagle
-* grenade
-* flash
-* smoke
-
+* smg_mp5
+* smg_ump45
+* smg_p90
+* pist_glock18
+* pist_usp
+* pist_p228
+* pist_fiveseven
+* pist_deagle
+* eq_fraggrenade
+* eq_flashbang
+* eq_smokegrenade
+* eq_decoy
 
 ## Поверхности
 Для того чтобы изменить звук поверхности по которой ходит игрок, нужно установить тег объекта поверхности.
