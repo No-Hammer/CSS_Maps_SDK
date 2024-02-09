@@ -7,10 +7,13 @@ public class GameSettings : MonoBehaviour
     [Tooltip("Использовать стандартные настройки сервера(при включении этой функции все настройки расположенные ниже применяться не будут)")]
     public bool useDefaultSettings = true;
     [Space]
+    [Tooltip("Отключить урон ножа")]
+    public bool disableKnifeDamage = false;
     [Tooltip("Список отключенных оружий на карте")]
     public string[] disableGuns;
-    [Tooltip("Отключить гравитацию")]
-    public bool disableGravity = false;
+    [Tooltip("Гравитация")]
+    [Range(0f, 15f)]
+    public float PhysicsGravity = 9.81f;
     [Tooltip("Рандомный спавн")]
     public bool enableRandomSpawn = false;
     [Tooltip("Начальная сумма денег")]
